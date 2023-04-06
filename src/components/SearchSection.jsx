@@ -12,11 +12,13 @@ const SearchSection = () => {
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
+        marginTop: "20px",
       }}
     >
-      <main>
+      <main style={{marginBottom: '11rem'}}>
         <Logo />
         <SearchBar />
+
         <div
           style={{
             display: "flex",
@@ -29,7 +31,7 @@ const SearchSection = () => {
           <Button title={"I'm feeling Lucky"} />
         </div>
 
-        <div style={{ display: "flex", gap: "12px", height: '430px' }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "12px",  marginTop: '30px' }}>
           <div>Google offered in:</div>
           <Language title={"Hausa"} />
           <Language title={"Igbo"} />

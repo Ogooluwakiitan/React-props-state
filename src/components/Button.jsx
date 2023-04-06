@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = (props) => {
   return (
-    <div>
+    <div style={{ marginTop: '30px'}}>
       <button
         style={{
           padding: "12px",

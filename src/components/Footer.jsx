@@ -3,33 +3,34 @@ import Location from "./Location";
 import FooterLeftMenu from "./FooterLeftMenu";
 import FooterRightMenu from "./FooterRightMenu";
 import FooterText from "./FooterText";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
-    <div>
-     <div>
-     <Location />
-     </div>
+    <>
+      <div className="footer">
+        <Location />
 
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div style={{ display: "flex", gap: "16px" }}>
-          <FooterLeftMenu title={"About"} />
-          <FooterLeftMenu title={"Advertising"} />
-          <FooterLeftMenu title={"Business"} />
-          <FooterLeftMenu title={"How Search Works"} />
-        </div>
+        <hr style={{ borderBottom: "1px solid rgba(128, 128, 128, 0.247)" }} />
 
-        <div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", gap: "16px" }}>
+            <FooterLeftMenu title={"About"} />
+            <FooterLeftMenu title={"Advertising"} />
+            <FooterLeftMenu title={"Business"} />
+            <FooterLeftMenu title={"How Search Works"} />
+          </div>
+
           <FooterText />
-        </div>
 
-        <div style={{ display: "flex", gap: "16px" }}>
-          <FooterRightMenu title={"Privacy"} />
-          <FooterRightMenu title={"Terms"} />
-          <FooterRightMenu title={"Settings"} />
+          <div style={{ display: "flex", gap: "16px" }}>
+            <FooterRightMenu title={"Privacy"} />
+            <FooterRightMenu title={"Terms"} />
+            <FooterRightMenu title={"Settings"} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

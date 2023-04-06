@@ -2,7 +2,9 @@ import React from 'react'
 
 const Location = () => {
   return (
-    <div>Nigeria</div>
+    <>
+      <p className="location" style={{padding: '5px'}}>Nigeria</p>
+    </>
   )
 }
 
