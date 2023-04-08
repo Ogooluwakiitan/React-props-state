@@ -1,10 +1,18 @@
-import React from "react";
+import { useState } from "react";
 
 const SearchBar = () => {
-  // const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+        
+  }
   return (
     <div>
-      <input
+     <form onSubmit = {handleSubmit}>
+     <input 
+      onChange={(e) => setSearch(e.target.value)}
+      value={search}
         type="text"
         style={{
           width: "550px",
@@ -15,6 +23,7 @@ const SearchBar = () => {
           paddingLeft: "20px",
         }}
       />
+     </form>
     </div>
   );
 };
