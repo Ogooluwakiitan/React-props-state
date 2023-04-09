@@ -1,19 +1,26 @@
 import { useState } from "react";
 
 const SearchBar = () => {
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
+  const [update, setUpdate] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-        
-  }
+    setSearch(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      setUpdate(search);
+    }
+  };
   return (
     <div>
-     <form onSubmit = {handleSubmit}>
-     <input 
-      onChange={(e) => setSearch(e.target.value)}
-      value={search}
-        type="text"
+      <input
+        onChange={handleSubmit}
+        value={search}
+        onKeyDown={handleKeyDown}
+        type="search"
         style={{
           width: "550px",
           height: "50px",
@@ -23,7 +30,8 @@ const SearchBar = () => {
           paddingLeft: "20px",
         }}
       />
-     </form>
+
+      <h2> {update}</h2>
     </div>
   );
 };
